@@ -1,3 +1,16 @@
+```bash
+
+Add-Content .gitignore "results_demo/"
+git rm -r --cached results_demo
+git add .gitignore
+git commit -m "chore: stop tracking results_demo"
+git push origin main
+
+```
+`Add-Content .gitignore "results_demo/"`：把 results_demo/ 加到忽略规则里
+`git rm -r --cached results_demo`：只从 Git 索引里删除，不会删你本地磁盘上的文件
+`git push origin main`：把这次删除同步到远程 main，这样远程仓库里的 results_demo 也会消失
+
 **确认 env/ 不再显示为未跟踪文件**
 
 ```bash
