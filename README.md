@@ -1,3 +1,10 @@
+| 目标 | 命令 |
+|------|------|
+| 丢弃单文件工作区改动 | `git restore <file>` |
+| 取消单文件暂存 | `git restore --staged <file>` |
+| 恢复单文件到某提交 | `git restore --source=<hash> <file>` |
+| 整个仓库回退到某提交 | `git reset --hard <hash>` |
+
 ```bash
 
 Add-Content .gitignore "results_demo/"
